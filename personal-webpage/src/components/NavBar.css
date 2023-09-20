@@ -1,0 +1,101 @@
+/* For animation of drop menu*/
+@keyframes slideFade {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+
+.navBar {
+    padding-top: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+    background-color: transparent;
+    border-radius: 80px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    z-index: 1000;
+    position: relative;
+    text-decoration: none;
+}
+
+.navBar table {
+    margin-left: auto;
+    margin-right: auto;
+    /* color: #D89D5B; */
+    color: #ffffff;
+    font-family: 'SF FONT bold', Arial, sans-serif;
+    font-size: 15pt;
+    text-align: center;
+    width: 100%;
+    border-collapse: collapse;
+    /* font-style: italic; */
+
+
+}
+
+.navBar td {
+    /* border: solid #000 1px; */
+    position: relative;
+    width: 160px;
+
+}
+
+.navBar td:hover {
+    color: #914cd2;
+    transition: transform 1s, color 1s;
+}
+
+.navBar a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.navBar a:hover {
+    color: #914cd2;
+    transition: transform 1s, color 1s;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+
+@media screen and (max-width: 1000px) {
+
+    .navBar {
+        display: flex;
+        align-items: center !important;/* Center items vertically */
+        justify-content: space-between; /* Spacing between items */
+    }
+
+    .menu-toggle {
+        display: block;
+        /* Display the menu toggle button for smaller screens */
+    }
+
+    .menu-closed {
+        display: none;
+        /* Hide the menu items when menu is closed */
+    }
+
+    .menu-open {
+        display: table;
+        /* Show the menu items when menu is open */
+    }
+
+    .menu-open td {
+        display: block;
+        /* Display each table cell as a block element */
+        text-align: center;
+        /* Center-align the text in table cells */
+        margin-bottom: 10px;
+        /* Add some space between items */
+    }
+}

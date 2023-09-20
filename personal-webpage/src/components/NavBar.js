@@ -1,58 +1,46 @@
-import { useState, useEffect } from "react";
-import { Navbar, Nav, Container } from "react-bootstrap";
-import { HashLink } from 'react-router-hash-link';
-import {
-  BrowserRouter as Router
-} from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import './NavBar.css'
 
-export const NavBar = () => {
+function Navbar() {
+    const location = useLocation();
+    const [activeSection, setActiveSection] = useState(null);
+    const [activeDropdown, setActiveDropdown] = useState(null);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const [activeLink, setActiveLink] = useState('home');
-  const [scrolled, setScrolled] = useState(false);
+    useEffect(() => {
+        const hash = location.hash.substring(1); // remove the '#' symbol
+        setActiveSection(hash);
+        // Scroll to the element
+        const element = document.getElementById(hash);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    }, [location]);
 
-  useEffect(() => {
-    const onScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    }
+    const handleMenuToggle = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
 
-    window.addEventListener("scroll", onScroll);
-
-    return () => window.removeEventListener("scroll", onScroll);
-  }, [])
-
-  const onUpdateActiveLink = (value) => {
-    setActiveLink(value);
-  }
-
-  return (
-    <Router>
-      <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
-        <Container>
-          <Navbar.Brand href="/">
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav">
-            <span className="navbar-toggler-icon"></span>
-          </Navbar.Toggle>
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto">
-              <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
-              <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Skills</Nav.Link>
-              <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
-            </Nav>
-            <span className="navbar-text">
-              <div className="social-icon">
-              </div>
-              <HashLink to='#connect'>
-                <button className="vvd"><span>Let’s Connect</span></button>
-              </HashLink>
-            </span>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-    </Router>
-  )
+    return (
+        <div className="navBar">
+            <button className="menu-toggle" onClick={handleMenuToggle}>
+                &#9776;
+            </button>
+            <table className={isMenuOpen ? 'menu-open' : 'menu-closed'}>
+                <table>
+                    <tr>
+                        <td><Link to="/">Home</Link></td>
+                        <td><a href='#about'>About</a></td>
+                        <td><a href="/#proficiency">Languages</a></td>
+                        <td><Link to="/Projects">Projects</Link></td>
+                        <td><Link to="/Contact">Contact</Link></td>
+                    </tr>    
+                </table>
+            </table>
+        </div>
+    );
 }
+
+
+export default Navbar;

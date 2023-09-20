@@ -96,7 +96,7 @@ p.danger {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(30px + 2vmin);
   color: white;
 }
 
@@ -111,6 +111,14 @@ p.danger {
   to {
     transform: rotate(360deg);
   }
+}
+
+.about-section{
+  min-height: 100vh;
+}
+
+.profi-section{
+  min-height: 100vh;
 }
 
 /************ Navbar Css ************/
