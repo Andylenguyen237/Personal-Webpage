@@ -1,17 +1,3 @@
-/* For animation of drop menu*/
-@keyframes slideFade {
-    from {
-        opacity: 0;
-        transform: translateX(-50%) translateY(-10px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(-50%) translateY(0);
-    }
-}
-
-
 .navBar {
     padding-top: 30px;
     margin-left: 15px;
@@ -68,34 +54,9 @@
 
 
 @media screen and (max-width: 1000px) {
-
-    .navBar {
-        display: flex;
-        align-items: center !important;/* Center items vertically */
-        justify-content: space-between; /* Spacing between items */
+    
+    .navBar table {
+        font-size: 10pt;
     }
-
-    .menu-toggle {
-        display: block;
-        /* Display the menu toggle button for smaller screens */
-    }
-
-    .menu-closed {
-        display: none;
-        /* Hide the menu items when menu is closed */
-    }
-
-    .menu-open {
-        display: table;
-        /* Show the menu items when menu is open */
-    }
-
-    .menu-open td {
-        display: block;
-        /* Display each table cell as a block element */
-        text-align: center;
-        /* Center-align the text in table cells */
-        margin-bottom: 10px;
-        /* Add some space between items */
-    }
+    
 }

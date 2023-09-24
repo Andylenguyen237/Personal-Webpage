@@ -41,7 +41,8 @@ img {
 
 button {
   border: 0;
-  background-color: transparent;
+  width: 50%;
+  background-color: white;
 }
 
 input:focus, textarea:focus, select:focus {
@@ -102,45 +103,51 @@ p.danger {
 
 
 /************ About Me Css ************/
-.about-section{
+.about-section {
   min-height: 100vh;
-}
-
-.about-section > h2{
-  font-size: 50px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  margin: 0 auto;
 }
 
-.about-container{
-  
-  margin: 200px auto;
-  max-width: 1000px;
+.about-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: row; /* Adjust the direction to display text and image side by side */
   align-items: center;
+  width: 80%;
   justify-content: center;
-  border: transparent;
-  border-radius: 20px;
+  margin-top: 20px; /* Add margin to create space between sections */
+  padding: 20px; /* Add padding for spacing within the container */
+  font-size: 20px;
 }
 
-.about-container-text{
-  background: linear-gradient(180deg, #1a02a2, #541ba4);;
-  font-size: 18px;
-  padding: 70px;
+.about-container-text {
   line-height: 35px;
-  white-space: pre-wrap;
-  align-items: left;
+  font-family:Arial, Helvetica, sans-serif;
   text-align: left;
-  max-width: 50%;
+  padding: 30px;
+  font-size: 20px;
+  margin-right: 20px;
+  max-width: 60%;
 }
 
-.about-container > img{
-  background-color: gray;
-  max-width: 50%;
-  padding-right: 30px;
+.about-container > img {
+  max-width: 30%;
+  box-shadow: 10px 10px 20px rgba(255, 255, 255, 0.746);
 }
+
+.profi-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px; /* Add margin to create space between sections */
+  padding: 20px; /* Add padding for spacing within the section */
+}
+
 
 
 /************ Proficiency Css ************/
@@ -153,6 +160,6 @@ p.danger {
 
 /************ Footer Css ************/
 .footer-section{
-  min-height: 30vh;
+  min-height: 50vh;
 }
 
