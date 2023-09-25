@@ -41,8 +41,6 @@ img {
 
 button {
   border: 0;
-  width: 50%;
-  background-color: white;
 }
 
 input:focus, textarea:focus, select:focus {
@@ -66,13 +64,14 @@ p.danger {
 
 /************ Home Page ************/
 .introduction{
-  text-align: left;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .logo {
@@ -81,8 +80,6 @@ p.danger {
 }
 
 .introduction > h1 {
-  min-height: 100vh;
-  display: flex;
   white-space: pre-wrap;
   flex-direction: column;
   align-items: center;
@@ -156,10 +153,29 @@ p.danger {
   min-height: 100vh;
 }
 
-/************ Navbar Css ************/
+/************ Gallery Css ************/
+
+.gallery-container{
+  max-width: 100%;
+  margin: 0 auto;
+}
+/* Center the image horizontally within the image-container */
+.image-container {
+  text-align: center;
+}
+
+.image-container img {
+  max-width: 100%;
+  display: inline-block;
+  margin: 0 auto; /* Center horizontally */
+}
+
 
 /************ Footer Css ************/
 .footer-section{
   min-height: 50vh;
 }
+
+
+
 

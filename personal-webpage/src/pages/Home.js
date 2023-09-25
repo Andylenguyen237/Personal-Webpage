@@ -3,7 +3,12 @@ import ParticlesComponent from '../components/Particles'
 import Footer from '../components/Footer'
 import andy from '../images/intro.JPG'
 import Typewriter from 'typewriter-effect'
-import { Button } from 'react-bootstrap'
+import { Button } from '../components/Button'
+import Gallery from '../components/Gallery'
+
+import img1 from '../images/andy1.png'
+import img2 from '../images/andy2.png'
+import img3 from '../images/intro.JPG'
 
 function home() {
 
@@ -11,13 +16,24 @@ function home() {
   return (
     <>
     <div className='introduction'>
+
         <h1>
             Hey there, I'm Andy 
         </h1>
-        <button>So</button>
-        <ParticlesComponent id="tsparticles" />
+        <Button onClick={() => {
+          const aboutSection = document.getElementById("about");
+          if (aboutSection) {
+            aboutSection.scrollIntoView({ behavior: "smooth" });
+          }
+        }}>
+          Get start
+        </Button>
+        <ion-icon name="heart"></ion-icon>
+    </div>
+    
+    <ParticlesComponent id="tsparticles" />
         
-        </div>
+        
     {/* About section */}
     <div id="about" className='about-section'>
 
@@ -35,12 +51,15 @@ function home() {
             I'm currently a last year Computer Science student studying at the University of Melbourne. As a student I have rich working experiences as an Software/Data Engineer intern at Walter and Eliza Hall Institute of Medical Research and Software Engineer at ITG.{'\n\n'}
             During my uni-year, I've done over 10+ projects and accomplished as top 5 project in WIT Hackathon 2021
           </h3>
-          <Button>S</Button>
         </div>
         <img src={andy}></img>
       </div>
               
       
+    </div>
+
+    <div className='gallery'>
+      <Gallery></Gallery>
     </div>
     
     <div className='footer-section'></div>
