@@ -32,9 +32,9 @@ function Navbar() {
                     <tr>
                         <td><Link to="/">Home</Link></td>
                         <td><a href='/#about'>About</a></td>
-                        <td><Link to='/Languages'>Languages</Link></td>
+                        <td><a href='/#gallery'>Gallery</a></td>
+                        <td><Link to="/Proficiency">Proficiency</Link></td>
                         <td><Link to="/Projects">Projects</Link></td>
-                        <td><Link to="/Contact">Contact</Link></td>
                     </tr>    
                 </table>
             </table>

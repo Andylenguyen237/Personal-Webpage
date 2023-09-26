@@ -6,11 +6,7 @@ import Typewriter from 'typewriter-effect'
 import { Button } from '../components/Button'
 import Gallery from '../components/Gallery'
 
-import img1 from '../images/andy1.png'
-import img2 from '../images/andy2.png'
-import img3 from '../images/intro.JPG'
-
-function home() {
+function HomePage() {
 
   const introduction = ""
   return (
@@ -28,7 +24,6 @@ function home() {
         }}>
           Get start
         </Button>
-        <ion-icon name="heart"></ion-icon>
     </div>
     
     <ParticlesComponent id="tsparticles" />
@@ -36,17 +31,18 @@ function home() {
         
     {/* About section */}
     <div id="about" className='about-section'>
-
       <div className='about-container'>
         <div className='about-container-text'>
-        <Typewriter
-            options={{
-              autoStart:true,
-              loop:true,
-              delay:80,
-              strings: ["I'm Andy, a Software Developer"]
-            }}
-          />
+          <div className='type-text'>
+            <Typewriter
+                  options={{
+                    autoStart:true,
+                    loop:true,
+                    delay:80,
+                    strings: ["I'm Andy, a Software Developer"]
+                  }}
+            />
+          </div>
           <h3>
             I'm currently a last year Computer Science student studying at the University of Melbourne. As a student I have rich working experiences as an Software/Data Engineer intern at Walter and Eliza Hall Institute of Medical Research and Software Engineer at ITG.{'\n\n'}
             During my uni-year, I've done over 10+ projects and accomplished as top 5 project in WIT Hackathon 2021
@@ -58,7 +54,8 @@ function home() {
       
     </div>
 
-    <div className='gallery'>
+    <div id="gallery" className='gallery'>
+      <h1>Get to know more</h1>
       <Gallery></Gallery>
     </div>
     
@@ -70,4 +67,4 @@ function home() {
   )
 }
 
-export default home
+export default HomePage

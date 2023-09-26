@@ -3,12 +3,14 @@
 }
 
 .btn {
-padding: 10px 20px;
+padding: 100px;
 border-radius: 2px;
 outline: none;
 border: none;
 cursor: pointer;
 width: 10%;
+height: 6vh;
+margin-top: 30px;
 }
 
 .btn--primary {
@@ -41,4 +43,13 @@ transition: all 0.3s ease-out;
 background: white;
 color: rgb(0, 0, 0);
 transition: 250ms;
+}
+
+@media screen and (max-width:1300px) {
+
+    .btn {
+    width: 40%;
+    height: 6vh;
+    }
+    
 }

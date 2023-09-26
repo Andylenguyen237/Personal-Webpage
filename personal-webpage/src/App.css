@@ -99,7 +99,7 @@ p.danger {
 }
 
 
-/************ About Me Css ************/
+/************ About Me Section Css ************/
 .about-section {
   min-height: 100vh;
   display: flex;
@@ -119,6 +119,10 @@ p.danger {
   margin-top: 20px; /* Add margin to create space between sections */
   padding: 20px; /* Add padding for spacing within the container */
   font-size: 20px;
+}
+
+.type-text{
+  
 }
 
 .about-container-text {
@@ -145,6 +149,60 @@ p.danger {
   padding: 20px; /* Add padding for spacing within the section */
 }
 
+@media screen and (max-width: 1300px) {
+  .about-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .about-container-text{
+    line-height: 25px;
+    width: 100%;
+    font-size: 12px;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 20px;
+  }
+
+  .about-container-text >h3{
+    font-size: 1.1em;
+    margin: 0px;
+    padding: 0px;
+  }
+}
+
+/************ Gallery Section Css ************/
+.gallery{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery > h1{
+  margin: 100px;
+}
+
+
+@media screen and (max-width:1300px) {
+
+.gallery{
+  margin-bottom: 700px;
+}
+
+.gallery > h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 2em;
+}
+  
+}
 
 
 /************ Proficiency Css ************/
@@ -159,21 +217,63 @@ p.danger {
   max-width: 100%;
   margin: 0 auto;
 }
-/* Center the image horizontally within the image-container */
+
 .image-container {
   text-align: center;
 }
 
 .image-container img {
-  max-width: 100%;
+  width: 30%;
   display: inline-block;
   margin: 0 auto; /* Center horizontally */
+}
+
+.image-title{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-title > p{
+  font-size: 1.5em;
+}
+
+.gallery-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+
+@media screen and (max-width:1300px) {
+
+
+  .image-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .image-container img{
+    margin-top: 20px;
+    width: 70%;
+  }
+
+  
+  
 }
 
 
 /************ Footer Css ************/
 .footer-section{
   min-height: 50vh;
+
 }
 
 

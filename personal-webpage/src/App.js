@@ -1,10 +1,9 @@
-import { Nav } from 'react-bootstrap';
 import './App.css';
-import ParticlesComponent from './components/Particles';
-import Home from './pages/Home';
+import HomePage from './pages/HomePage';
 import NavBar from './components/NavBar'
+import Projects from './pages/Projects';
+import ProficiencyPage from './pages/ProficiencyPage';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import About from './pages/About';
 
 function App() {
   return (
@@ -12,7 +11,9 @@ function App() {
       <Router>
         <NavBar></NavBar>
         <Routes>
-          <Route path='/' element={<Home></Home>}/>
+          <Route path='/' element={<HomePage/>}/>
+          <Route path='/Proficiency' element={<ProficiencyPage/>}/>
+          <Route path='/Projects' element={<Projects/>}/>
         </Routes>
       </Router>
     </>
