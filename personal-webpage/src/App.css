@@ -17,7 +17,7 @@ body {
   font-weight: 400;
   overflow-x: hidden;
   position: relative;
-  background-color: #121212 !important;
+  background-color: #000000 !important;
   color: #fff !important;
   font-family: 'Centra', sans-serif !important;
 }
@@ -204,13 +204,6 @@ p.danger {
   
 }
 
-
-/************ Proficiency Css ************/
-
-.profi-section{
-  min-height: 100vh;
-}
-
 /************ Gallery Css ************/
 
 .gallery-container{
@@ -264,9 +257,6 @@ p.danger {
     margin-top: 20px;
     width: 70%;
   }
-
-  
-  
 }
 
 
@@ -276,6 +266,105 @@ p.danger {
 
 }
 
+/************ Proficiency Css ************/
 
+.languages-section{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.langim-container{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+  margin-top: 80px;
+}
+
+.langim-container > img{
+  width: 10%;
+  object-fit: cover;
+  margin-right: 30px;
+  margin: 0 auto;
+}
+
+.progress-container{
+  display: flex;
+  flex-direction: row;
+  margin-right: 300px;
+  margin: 0 auto;
+}
+
+.skills-section{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.table-skill{
+  border: white;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.program-skill{
+  width: 50%;
+  background-color: white;
+}
+
+.soft-skill{
+  width: 50%;
+  background-color: blue;
+}
+
+/************ Experiences Css ************/
+
+.info-container {
+  display: flex;
+  flex-direction: row; 
+  align-items: center; 
+  justify-content: center; 
+  background-color: #1e2e3d;
+  padding: 30px;
+  margin: 0 auto;
+  border-radius: 80px;
+  margin-top: 80px;
+  max-width: 70%;
+  object-fit: cover;
+  height: 50vh;
+}
+
+.work-img {
+    width: 30%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.work-body{
+  font-size: 20px;
+  padding: 50px;
+  white-space: pre-wrap;
+  max-width: 700px;
+  align-items: left;
+  justify-content: left;
+  text-align: left;
+  font-family: Arial, sans-serif;
+  object-fit: cover;
+}
+
+.work-body >h2{
+  color: white !important;
+  text-decoration: underline;
+}
+
+.work-body > a{
+  color: white;
+  text-decoration: underline;
+}
 
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Fade } from 'react-slideshow-image';
+import Carousel from 'react-bootstrap/Carousel';
 import 'react-slideshow-image/dist/styles.css'
 import kid from '/Users/andylenguyen/Documents/Personal-Webpage/personal-webpage/src/images/kid.jpg'
 import family from '/Users/andylenguyen/Documents/Personal-Webpage/personal-webpage/src/images/family.jpg'

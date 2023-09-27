@@ -14,14 +14,15 @@ return (
 	<h1 style={{ color: "white",
 				textAlign: "center",
 				marginTop: "-50px",
-                marginBottom: "50px" }}>
+                marginBottom: "80px" }}>
 		Hope you enjoy this portfolio
 	</h1>
 	<Container>
 		<Row>
 		<Column>
-			<Heading>About Us</Heading>
-			<FooterLink href="#">About me</FooterLink>
+			<Heading>About</Heading>
+			<FooterLink href="/#about">Introduction</FooterLink>
+			<FooterLink href="/#gallery">Gallery</FooterLink>
 		</Column>
 		<Column>
 			<Heading>Projects</Heading>
@@ -31,41 +32,16 @@ return (
 			<FooterLink href="#">Teaching</FooterLink>
 		</Column>
 		<Column>
-			<Heading>Contact</Heading>
-			<FooterLink href="#">Linkedln</FooterLink>
-			<FooterLink href="#">Facebook</FooterLink>
-			<FooterLink href="#">Instagram</FooterLink>
+			<Heading>Work</Heading>
+			<FooterLink href="https://www.linkedin.com/in/dan-le-nguyen-0620aa246/"  target="_blank">Linkedln</FooterLink>
+			<FooterLink href="https://github.com/Andylenguyen237" target="_blank">Github</FooterLink>
+			<FooterLink href="">Email</FooterLink>
+			
 		</Column>
 		<Column>
 			<Heading>Social Media</Heading>
-			<FooterLink href="#">
-			<i className="fab fa-facebook-f">
-				<span style={{ marginLeft: "10px" }}>
-				Facebook
-				</span>
-			</i>
-			</FooterLink>
-			<FooterLink href="#">
-			<i className="fab fa-instagram">
-				<span style={{ marginLeft: "10px" }}>
-				Instagram
-				</span>
-			</i>
-			</FooterLink>
-			<FooterLink href="#">
-			<i className="fab fa-twitter">
-				<span style={{ marginLeft: "10px" }}>
-				Twitter
-				</span>
-			</i>
-			</FooterLink>
-			<FooterLink href="#">
-			<i className="fab fa-youtube">
-				<span style={{ marginLeft: "10px" }}>
-				Youtube
-				</span>
-			</i>
-			</FooterLink>
+			<FooterLink href="https://www.facebook.com/dan.le.100483/" target="_blank">Facebook</FooterLink>
+			<FooterLink href="https://www.instagram.com/lnglh_dann/" target="_blank">Instagram</FooterLink>
 		</Column>
 		</Row>
 	</Container>

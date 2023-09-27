@@ -59,9 +59,7 @@ function HomePage() {
       <Gallery></Gallery>
     </div>
     
-    <div className='footer-section'></div>
-    <Footer></Footer>
-
+    <div className='footer-section'><Footer></Footer></div>
     
     </>
   )

@@ -33,8 +33,18 @@ function Navbar() {
                         <td><Link to="/">Home</Link></td>
                         <td><a href='/#about'>About</a></td>
                         <td><a href='/#gallery'>Gallery</a></td>
-                        <td><Link to="/Proficiency">Proficiency</Link></td>
-                        <td><Link to="/Projects">Projects</Link></td>
+                        <td onMouseEnter={() => setActiveDropdown('proficiency')} onMouseLeave={() => setActiveDropdown(null)}>
+                            <Link to="/Proficiency">Proficiency</Link>
+                            {activeDropdown === 'proficiency' && (
+                                <div className="dropdownContent">
+                                    <table>
+                                        <tr><Link to="/Proficiency#languages"><td>Languages</td></Link></tr>
+                                        <tr><Link to="/Proficiency#skills"><td>Skills</td></Link></tr>
+                                    </table>
+                                </div>
+                            )}
+                        </td>
+                        <td><Link to="/Experiences">Experiences</Link></td>
                     </tr>    
                 </table>
             </table>
